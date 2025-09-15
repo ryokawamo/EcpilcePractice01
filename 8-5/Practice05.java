@@ -6,19 +6,22 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		calculationSum();
-		calculationCircleArea();
-		calculationGCD();
-		calculationSquareRoot();
-		diceGame();
+		Scanner scanner = new Scanner(System.in);
+		
+		calculationSum(scanner);
+		calculationCircleArea(scanner);
+		calculationGCD(scanner);
+		calculationSquareRoot(scanner);
+		diceGame(scanner);
 		textReverse();
 		
 		double avg = average(2, 7, 1);
 		System.out.println("平均は:" + avg);
+		
+		scanner.close();
 	}
 		
-	public static void calculationSum() {	
-		Scanner scanner = new Scanner(System.in);
+	public static void calculationSum(Scanner scanner) {
 		
 		System.out.print("１つ目の整数を入力してください:");
 		int num1 = scanner.nextInt();
@@ -27,11 +30,11 @@ public class Main {
 		int num2 = scanner.nextInt();
 		
 		int sum = num1 + num2;
-		System.out.println("２つの整数の和は: + sum");
+		System.out.println("２つの整数の和は:" + sum);
 	}
 		
-	public static void calculationCircleArea() {
-		Scanner scanner = new Scanner(System.in);
+	public static void calculationCircleArea(Scanner scanner) {
+
 		System.out.print("円の半径を入力してください:");
 		double radius = scanner.nextDouble();
 		
@@ -39,8 +42,8 @@ public class Main {
 		System.out.println("円の面積は" + area);
 	}
 	
-	public static void calculationGCD() {
-		Scanner scanner = new Scanner(System.in);
+	public static void calculationGCD(Scanner scanner) {
+
 		System.out.print("１つ目の整数を入力してください:");
 		int num1 = scanner.nextInt();
 		
@@ -55,11 +58,11 @@ public class Main {
 			num2 = num1 % num2;
 			num1 = temp;
 		}
-		System.out.println("最大公約数は: + num1");
+		System.out.println("最大公約数は:" + num1);
 	}
 	
-	public static void calculationSquareRoot() {
-		Scanner scanner = new Scanner(System.in);
+	public static void calculationSquareRoot(Scanner scanner) {
+
 		System.out.print("平方根を求めたい数を入力してください:");
 		double value = scanner.nextDouble();
 		
@@ -73,8 +76,8 @@ public class Main {
 		System.out.println(value + "の平方根は" + result);
 	}
 	
-	public static void diceGame() {
-		Scanner scanner = new Scanner(System.in);
+	public static void diceGame(Scanner scanner) {
+
 		Random random = new Random();
 		
 		System.out.print("サイコロの目を予想してください:");
@@ -87,7 +90,7 @@ public class Main {
 		if (guess == dice) {
 			System.out.println("正解!");
 		} else {
-			System.out.println("残念！再開は" + dice + "でした");
+			System.out.println("残念！正解は" + dice + "でした");
 		}
 	}
 	

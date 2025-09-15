@@ -10,15 +10,15 @@ public class Main {
 		
 		while (true) {
 			System.out.print("1つ目の数字を入力してください:");
-			int num1 = scanner.nextInt();
+			double num1 = scanner.nextDouble();
 			
 			System.out.print("演算子を入力してください（ + - * / ):");
 			String operator = scanner.next();
 			
 			System.out.print("2つ目の数字を入力してください:");
-			int num2 = scanner.nextInt();
+			double num2 = scanner.nextDouble();
 			
-			int result = 0;
+			double result = 0;
 			
 			if (operator.equals("+")) {
 				result = num1 + num2;

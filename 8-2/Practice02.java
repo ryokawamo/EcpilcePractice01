@@ -12,7 +12,6 @@ public class Main {
 		}
 		
 		int dayOfWeek = 3;
-		String dayName;
 			
 		switch (dayOfWeek) {
 			case 1:

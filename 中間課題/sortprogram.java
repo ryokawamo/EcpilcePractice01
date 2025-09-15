@@ -36,7 +36,7 @@ public class Main {
 		for (int num : sorted) {
 			System.out.print(num + " ");
 		}
-
+		scanner.close();
 	}
 	
 	public static int[] sortAscending(int[] array) {
